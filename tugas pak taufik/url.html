@@ -1,0 +1,22 @@
+<!doctype html>
+<html> 
+ <head></head>
+ <body> 
+  <p>Enter a URL to encode:</p> 
+  <input type="text" id="myURL" value="https://www.instagram.com/noname_16408?igsh=Y2Fuazllb2wzeXh4"> <button onclick="encodeLink()">Encode</button> <button onclick="openEncodedLink()">Open Encoded Link</button> 
+  <p id="encodedLink"></p> 
+  <script>
+function encodeLink() {
+  var url = document.getElementById("https://www.instagram.com/noname_16408?igsh=Y2Fuazllb2wzeXh4").value;
+  var encodedUrl = encodeURIComponent(url);
+  document.getElementById("encodedLink").innerHTML = "Encoded URL: " + encodedUrl;
+}
+
+function openEncodedLink() {
+  var url = document.getElementById("myURL").value;
+  var encodedUrl = encodeURIComponent(url);
+  window.open("https://www.instagram.com/noname_16408?igsh=Y2Fuazllb2wzeXh4" + encodedUrl, "_blank");
+}
+</script> 
+ 
+</body></html>
